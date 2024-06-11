@@ -12,7 +12,7 @@
     <title>SB Admin 2 - Dashboard</title>
 
     <!-- style -->
-    @include('includes.style')
+    @include('includes.admin.style')
 
 </head>
 
@@ -22,12 +22,12 @@
     <div id="wrapper">
 
        <!-- sidebar -->
-        @include('includes.sidebar')
+        @include('includes.admin.sidebar')
 
          <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
         <!-- navbar -->
-        @include('includes.navbar')
+        @include('includes.admin.navbar')
 
 
         <!-- Content Wrapper -->
@@ -47,7 +47,7 @@
     </a>
 
 
-    @include('includes.footer')
+    @include('includes.admin.footer')
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -69,7 +69,7 @@
     </div>
 
     <!-- script -->
-    @include('includes.script')
+    @include('includes.admin.script')
 
 </body>
 
