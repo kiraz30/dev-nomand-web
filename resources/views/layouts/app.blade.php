@@ -20,5 +20,6 @@
 
 <!-- script -->
 @include('includes.script')
+@stack('add-on-script')
 </body>
 </html>
