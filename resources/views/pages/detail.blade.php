@@ -4,6 +4,10 @@
 Detail Travel
 @endsection
 
+@push('prepend-style')
+    <link rel="stylesheet" href="{{ url('frontend/libraries/zoom/xzoom.css') }}">
+@endpush
+
 
 @section('content')
 <!-- main -->
