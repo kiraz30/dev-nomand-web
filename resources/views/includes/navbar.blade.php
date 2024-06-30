@@ -2,7 +2,7 @@
     <div class="container">
         <nav class="row navbar navbar-expand-lg navbar-light bg-white">
             <a href="#" class="navbar-brand">
-                <img src="frontend/images/logo_nomads.png" alt="logo_nomads">
+                <img src="{{ url('frontend/images/logo_nomads.png') }}" alt="">
             </a>
             <!-- icon button saat tampilan di collapse (dikecilkan) ke ukurun mobile -->
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">

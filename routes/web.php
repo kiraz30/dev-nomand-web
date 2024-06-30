@@ -28,6 +28,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::prefix('admin')
 ->namespace('Admin')
+->middleware((['auth','admin']))
 ->group(function(){
 Route::get('/', [DashboardController::class, 'index']);
 });
@@ -37,8 +38,10 @@ Auth::routes();
 Auth::routes(['verify' => true]);
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 });
+
+// Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/detail', [DetailController::class, 'index'])->name('detail');
 Route::get('/checkout',[CheckoutController::class, 'index'])->name('checkout');
