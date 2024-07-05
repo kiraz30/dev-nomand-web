@@ -30,7 +30,7 @@ Route::prefix('admin')
 ->namespace('Admin')
 ->middleware((['auth','admin']))
 ->group(function(){
-Route::get('/', [DashboardController::class, 'index']);
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 });
 
 Auth::routes();
@@ -38,10 +38,11 @@ Auth::routes();
 Auth::routes(['verify' => true]);
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home');
+    // Route::get('/detail', [DetailController::class, 'index'])->name('detail');
+    Route::get('/', [HomeController::class, 'index'])->name('home-page');
 });
 
-// Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/detail', [DetailController::class, 'index'])->name('detail');
 Route::get('/checkout',[CheckoutController::class, 'index'])->name('checkout');

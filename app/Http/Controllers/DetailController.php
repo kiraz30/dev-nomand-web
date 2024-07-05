@@ -10,3 +10,4 @@ class DetailController extends Controller
         return view('pages.detail');
     }
 }
+ 
