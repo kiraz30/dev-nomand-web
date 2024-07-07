@@ -45,24 +45,24 @@
                         Masuk
                     </button>
                 </form>
-            @endguest
+                @endguest
 
-            @auth
+                 @auth
                 <!-- mobile button -->
-            <form method="POST" class="from-inline d-sm-block d-md-none" action="{{ url('logout') }}">
-                @csrf
-                <button class="btn btn-login  my-2 my-sm-0" type="submit">
-                  Keluar  
-                </button>
-            </form>
-            <!-- desktop button -->
-            <form method="POST" class="from-inline my-2 my-lg-0 d-none d-md-block" action="{{ url('logout') }}">
-                @csrf
-                <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4" type="submit">
-                    Keluar
-                </button>
-            </form>
-            @endauth 
+                 <form method="POST" class="from-inline d-sm-block d-md-none" action="{{ url('logout') }}">
+                      @csrf
+                       <button class="btn btn-login  my-2 my-sm-0" type="submit">
+                         Keluar  
+                        </button>
+                  </form>
+                  <!-- desktop button -->
+                  <form method="POST" class="from-inline my-2 my-lg-0 d-none d-md-block" action="{{ url('logout') }}">
+                      @csrf
+                       <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4" type="submit">
+                           Keluar
+                      </button>
+                   </form>
+                  @endauth 
             </div>
         </nav>
        </div>
